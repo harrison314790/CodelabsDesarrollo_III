@@ -1,0 +1,18 @@
+server:
+  port: 8081  # Puerto donde corre el microservicio
+
+spring:
+  application:
+    name: producto-service  # Nombre del microservicio (útil para Eureka o discovery)
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/productos_db
+    username: root
+    password: tu_contraseña
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Crea o actualiza la base de datos automáticamente
+    show-sql: true      # Muestra las consultas SQL en consola
+    database-platform: org.hibernate.dialect.MySQL8Dialect
